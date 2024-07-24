@@ -1,11 +1,1 @@
-ESP-IDF template app
-====================
-
-This is a template application to be used with [Espressif IoT Development Framework](https://github.com/espressif/esp-idf).
-
-Please check [ESP-IDF docs](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html) for getting started instructions.
-
-*Code in this repository is in the Public Domain (or CC0 licensed, at your option.)
-Unless required by applicable law or agreed to in writing, this
-software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-CONDITIONS OF ANY KIND, either express or implied.*
+The work is to create its own drone software, allowing remote control and automatic stabilization. My flight controller is based on ESP32, which communicates via WiFi (UDP) with a laptop. From a practical point of view, it is possible that this is not a good choice, but I used didactic purposes in order to regain experience useful in a wider range of professions during the implementation. I write code in C / C++ in ESPIDF framework using FreeRTOS. The server on the laptop with which the drone communicates was written in Python, from which I still lack knowledge and experience. At this point, I'm focusing on controlling and stabilizing the "roll" and "pitch" angles using the PID algorithm. For now, the drone receives its orientation data from the MPU6050 accelerometer / gyroscope, which asynchronously calculates the accommodation thanks to a built-in DMP program from the sensor manufacturer. 
